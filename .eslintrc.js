@@ -14,5 +14,7 @@ module.exports = {
   plugins: ['react'],
   rules: {
     'no-undef': 'off',
+    'react/jsx-uses-react': 'off',
+    'react/react-in-jsx-scope': 'off',
   },
 };
