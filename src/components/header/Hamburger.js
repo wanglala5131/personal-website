@@ -1,10 +1,10 @@
 import styled from 'styled-components';
-import { mobile } from '../variables';
+import { ipad } from '../variables';
 
 const HamburgerContainer = styled.label`
   display: none;
 
-  @media ${mobile} {
+  @media ${ipad} {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -12,6 +12,8 @@ const HamburgerContainer = styled.label`
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 5;
+    cursor: pointer;
   }
 `;
 
@@ -20,7 +22,7 @@ const HamburgerLine = styled.span`
   display: inline-block;
   height: 3px;
   width: 22px;
-  background-color: ${props => props.theme.fontColor};
+  background-color: ${props => props.theme.darkBlue};
   border-radius: 10px;
 
   &::after,
@@ -31,7 +33,7 @@ const HamburgerLine = styled.span`
     display: inline-block;
     height: 3px;
     width: 22px;
-    background-color: ${props => props.theme.fontColor};
+    background-color: ${props => props.theme.darkBlue};
     border-radius: 10px;
     transition: all 0.2s ease-in-out;
   }
@@ -65,9 +67,17 @@ const HamburgerCheckbox = styled.input.attrs({
       }
     }
 
-    & ~ nav {
-      opacity: 1;
-      transition: all 0.2s ease-in-out;
+    @media ${ipad} {
+      & ~ .nav-wrapper {
+        nav {
+          transform: scaleY(1);
+          transition: all 0.2s ease-in-out;
+        }
+
+        label {
+          display: block;
+        }
+      }
     }
   }
 `;

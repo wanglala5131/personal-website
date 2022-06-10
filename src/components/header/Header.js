@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Hamburger } from './Hamburger';
-import { mobile } from '../variables';
+import { ipad } from '../variables';
 
 // data
 const navList = [
@@ -22,38 +22,87 @@ const Header = styled.header`
   width: 100%;
   padding: 20px;
   box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  z-index: 10;
 `;
 
-const NavItem = styled.a`
-  padding: 0 20px;
-  color: ${props => props.theme.fontColor};
-  font-size: 18px;
-  font-weight: bold;
-
-  @media ${mobile} {
-    display: block;
-    padding: 10px;
-    margin: 0 20px;
-    border-top: 2px solid ${props => props.theme.blueLight};
-    text-align: center;
+const NavWrapper = styled.div`
+  @media ${ipad} {
+    // 手機版遮幕
+    label {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh; // TODO: 注意手機版
+      background-color: rgba(0, 0, 0, 0.7);
+      z-index: 1;
+    }
   }
 `;
 
 const Nav = styled.nav`
-  @media ${mobile} {
+  display: flex;
+  z-index: 2;
+
+  @media ${ipad} {
+    flex-direction: column;
     position: absolute;
-    top: 100%;
+    top: 0;
     left: 0;
     width: 100%;
+    padding: 0 20px;
     background-color: ${props => props.theme.bgColor};
-    opacity: 0;
+    transform-origin: top;
+    transform: scaleY(0);
+  }
+`;
 
-    // 手機版遮幕
-    label {
-      display: block;
+const NavItem = styled.li`
+  a {
+    display: block;
+    position: relative;
+    margin: 0 30px;
+    color: ${props => props.theme.darkBlue};
+    font-size: 18px;
+    font-weight: bold;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -10px;
+      width: 0;
+      height: 2px;
+      background-color: ${props => props.theme.blue};
+      transition: all 0.2s ease-in-out;
+    }
+  }
+
+  @media (hover: hover) {
+    a:hover::after {
       width: 100%;
-      height: 100vh; // TODO: 注意手機版
-      background-color: rgba(0, 0, 0, 0.8);
+
+      @media ${ipad} {
+        width: 0;
+      }
+    }
+  }
+
+  @media ${ipad} {
+    display: block;
+    background-color: ${props => props.theme.bgColor};
+    border-top: 2px solid ${props => props.theme.blue};
+    text-align: center;
+
+    &:first-child {
+      padding-top: 30px;
+    }
+
+    a {
+      padding: 10px;
+      color: ${props => props.theme.fontColor};
     }
   }
 `;
@@ -63,12 +112,16 @@ const PageHeader = () => {
   return (
     <Header>
       <Hamburger />
-      <Nav>
-        {navList.map(item => (
-          <NavItem key={item.name}>{item.name}</NavItem>
-        ))}
+      <NavWrapper className="nav-wrapper">
+        <Nav>
+          {navList.map(item => (
+            <NavItem key={item.name}>
+              <a href={item.link}>{item.name}</a>
+            </NavItem>
+          ))}
+        </Nav>
         <label htmlFor="hamburger"></label>
-      </Nav>
+      </NavWrapper>
     </Header>
   );
 };

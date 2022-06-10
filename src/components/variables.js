@@ -1,8 +1,10 @@
 export const theme = {
   bgColor: '#fcfcfc',
   fontColor: '#3c3c3c',
-  blueLight: '#ddf',
+  blue: '#ddf',
+  darkBlue: '	#7d7dff',
 };
 
 // RWD
-export const mobile = '(max-width: 768px)';
+export const ipad = '(max-width: 768px)';
+export const mobile = '(max-width: 576px)';
