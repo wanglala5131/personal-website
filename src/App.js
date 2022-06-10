@@ -1,7 +1,9 @@
 import { ThemeProvider } from 'styled-components';
 import { ResetStyle, GlobalStyle } from './components/globalStyle';
-import { PageHeader } from './components/header/Header';
 import { theme } from './components/variables';
+
+import { PageHeader } from './components/header/Header';
+import { PageBanner } from './components/banner/Banner';
 
 const App = () => {
   return (
@@ -10,7 +12,7 @@ const App = () => {
       <ThemeProvider theme={theme}>
         <GlobalStyle />
         <PageHeader />
-        reaact
+        <PageBanner />
       </ThemeProvider>
     </div>
   );
