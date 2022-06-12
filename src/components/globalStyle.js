@@ -78,5 +78,10 @@ body {
   font-family: 'Noto Sans TC', sans-serif;
   background-color: ${props => props.theme.bgColor};
   color:  ${props => props.theme.fontColour};
+  line-height: 1.2;
+}
+
+html, body {
+  scroll-behavior: smooth;
 }
 `;
