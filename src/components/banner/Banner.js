@@ -1,5 +1,5 @@
 import styled, { keyframes } from 'styled-components';
-import { mobile, ipad } from '../variables';
+import { mobile, tablets } from '../variables';
 
 const typing = width => keyframes`
  from { width: 0;}
@@ -56,7 +56,7 @@ const MainText = styled.h1`
   animation: ${() => typing('15ch')} 2s steps(15, end),
     ${caret} 0.75s step-end 3;
 
-  @media ${ipad} {
+  @media ${tablets} {
     font-size: 40px;
   }
 
@@ -68,7 +68,7 @@ const MainText = styled.h1`
 const SecondText = styled.h2`
   display: inline-block;
   margin-top: 10px;
-  color: ${props => props.theme.darkBlue};
+  color: ${props => props.theme.primary};
   font-size: 30px;
   font-weight: bold;
   text-align: center;
@@ -79,7 +79,7 @@ const SecondText = styled.h2`
   animation: ${() => typing('19ch')} 2s 2.5s steps(19, end) both,
     ${caret} 0.75s 2.5s step-end 4;
 
-  @media ${ipad} {
+  @media ${tablets} {
     font-size: 20px;
   }
 `;

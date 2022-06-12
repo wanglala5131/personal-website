@@ -1,10 +1,11 @@
+import { forwardRef } from 'react';
 import styled from 'styled-components';
-import { ipad } from '../variables';
+import { tablets } from '../variables';
 
 const HamburgerContainer = styled.label`
   display: none;
 
-  @media ${ipad} {
+  @media ${tablets} {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -22,7 +23,7 @@ const HamburgerLine = styled.span`
   display: inline-block;
   height: 3px;
   width: 22px;
-  background-color: ${props => props.theme.darkBlue};
+  background-color: ${props => props.theme.primary};
   border-radius: 10px;
 
   &::after,
@@ -33,7 +34,7 @@ const HamburgerLine = styled.span`
     display: inline-block;
     height: 3px;
     width: 22px;
-    background-color: ${props => props.theme.darkBlue};
+    background-color: ${props => props.theme.primary};
     border-radius: 10px;
     transition: all 0.2s ease-in-out;
   }
@@ -67,7 +68,7 @@ const HamburgerCheckbox = styled.input.attrs({
       }
     }
 
-    @media ${ipad} {
+    @media ${tablets} {
       & ~ .nav-wrapper {
         nav {
           transform: scaleY(1);
@@ -82,13 +83,14 @@ const HamburgerCheckbox = styled.input.attrs({
   }
 `;
 
-export const Hamburger = () => {
+export const Hamburger = forwardRef((props, ref) => {
   return (
     <>
-      <HamburgerCheckbox id="hamburger" />
+      <HamburgerCheckbox ref={ref} id="hamburger" />
       <HamburgerContainer htmlFor="hamburger">
         <HamburgerLine />
       </HamburgerContainer>
     </>
   );
-};
+});
+Hamburger.displayName = 'Hamburger';

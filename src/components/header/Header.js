@@ -1,10 +1,11 @@
+import { useRef } from 'react';
 import styled from 'styled-components';
 import { Hamburger } from './Hamburger';
-import { ipad } from '../variables';
+import { tablets } from '../variables';
 
 // data
 const navList = [
-  { name: 'About Me', link: '#about' },
+  { name: 'About', link: '#about' },
   { name: 'Skill', link: '#skill' },
   { name: 'Experience', link: '#experience' },
   { name: 'Works', link: '#works' },
@@ -27,7 +28,7 @@ const Header = styled.header`
 `;
 
 const NavWrapper = styled.div`
-  @media ${ipad} {
+  @media ${tablets} {
     // 手機版遮幕
     label {
       display: none;
@@ -46,7 +47,7 @@ const Nav = styled.nav`
   display: flex;
   z-index: 2;
 
-  @media ${ipad} {
+  @media ${tablets} {
     flex-direction: column;
     position: absolute;
     top: 0;
@@ -64,7 +65,7 @@ const NavItem = styled.li`
     display: block;
     position: relative;
     margin: 0 30px;
-    color: ${props => props.theme.darkBlue};
+    color: ${props => props.theme.primary};
     font-size: 18px;
     font-weight: bold;
 
@@ -75,7 +76,7 @@ const NavItem = styled.li`
       bottom: -10px;
       width: 0;
       height: 2px;
-      background-color: ${props => props.theme.blue};
+      background-color: ${props => props.theme.primaryLight};
       transition: all 0.2s ease-in-out;
     }
   }
@@ -84,16 +85,16 @@ const NavItem = styled.li`
     a:hover::after {
       width: 100%;
 
-      @media ${ipad} {
+      @media ${tablets} {
         width: 0;
       }
     }
   }
 
-  @media ${ipad} {
+  @media ${tablets} {
     display: block;
     background-color: ${props => props.theme.bgColor};
-    border-top: 2px solid ${props => props.theme.blue};
+    border-top: 2px solid ${props => props.theme.primaryLight};
     text-align: center;
 
     &:first-child {
@@ -109,13 +110,18 @@ const NavItem = styled.li`
 
 // html
 const PageHeader = () => {
+  const hamburgerInput = useRef(null);
+  const clickNav = () => {
+    hamburgerInput.current.checked = false;
+  };
+
   return (
     <Header>
-      <Hamburger />
+      <Hamburger ref={hamburgerInput} />
       <NavWrapper className="nav-wrapper">
         <Nav>
           {navList.map(item => (
-            <NavItem key={item.name}>
+            <NavItem key={item.name} onClick={clickNav}>
               <a href={item.link}>{item.name}</a>
             </NavItem>
           ))}
