@@ -5,6 +5,7 @@ import { theme } from './components/variables';
 import { PageHeader } from './components/header/Header';
 import { PageBanner } from './components/banner/Banner';
 import { About } from './components/about/About';
+import { Skill } from './components/skill/Skill';
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
         <PageHeader />
         <PageBanner />
         <About />
+        <Skill />
       </ThemeProvider>
     </div>
   );
