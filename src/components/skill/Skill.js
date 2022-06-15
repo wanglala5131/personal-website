@@ -2,34 +2,7 @@ import styled from 'styled-components';
 import { bigTablets, tablets, mobile } from '../variables';
 import { Container } from '../Custom';
 import { Title } from '../Title';
-
-const skillArr = [
-  {
-    category: 'Front-End',
-    content: [
-      'Vue2 & 3 / Nuxt2 & 3 / Vuex / Vue Router / Pinia (一年以上工作開發經驗)',
-      'React / Redux / React Router (自學，於練習專案時開發過)',
-      'CSS3 / SASS / SCSS / Styled-component',
-      '熟悉手刻切版，具 RWD 與 AWD 經驗',
-      '熟悉 API 串接，擅長處理資料',
-      '具有網頁效能與 SEO 調整經驗',
-      '具有 Bootstrap5 與 BootstrapVue 使用經驗',
-      '具有 i18n 使用經驗',
-      '對 Socket.io 有基礎概念',
-    ],
-  },
-  {
-    category: 'Back-End',
-    content: [
-      '對 Node.js / Express / Handlebars 有基礎概念 (於練習專案時開發過)',
-      '對 MySQL 與 MongoDB 具有基礎概念',
-    ],
-  },
-  {
-    category: 'Others',
-    content: ['瞭解 git 版控原理和流程', 'Postman', 'npm / yarn / pnpm'],
-  },
-];
+import skillData from '../../data/skill.json';
 
 const SkillWrapper = styled(Container)`
   display: grid;
@@ -97,7 +70,7 @@ export const Skill = () => {
     <div id="skill">
       <Title>SKILL</Title>
       <SkillWrapper>
-        {skillArr.map(item => (
+        {skillData.map(item => (
           <SkillItem key={item.category}>
             <SkillCategory>{item.category}</SkillCategory>
             <SkillContentWrapper>
