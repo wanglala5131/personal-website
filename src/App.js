@@ -6,6 +6,7 @@ import { PageHeader } from './components/header/Header';
 import { PageBanner } from './components/banner/Banner';
 import { About } from './components/about/About';
 import { Skill } from './components/skill/Skill';
+import { Experience } from './components/experience/Experience';
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
         <PageBanner />
         <About />
         <Skill />
+        <Experience />
       </ThemeProvider>
     </div>
   );
