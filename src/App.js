@@ -7,6 +7,7 @@ import { PageBanner } from './components/banner/Banner';
 import { About } from './components/about/About';
 import { Skill } from './components/skill/Skill';
 import { Experience } from './components/experience/Experience';
+import { Projects } from './components/projects/Projects';
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
         <About />
         <Skill />
         <Experience />
+        <Projects />
       </ThemeProvider>
     </div>
   );
