@@ -2,7 +2,7 @@ import { useState, useRef } from 'react';
 import styled, { css } from 'styled-components';
 import PropTypes from 'prop-types';
 import { ArrowLeft, ArrowRight } from '@styled-icons/material';
-import { bigTablets } from '../variables';
+import { bigTablets, mobile } from '../variables';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Navigation } from 'swiper';
@@ -34,6 +34,10 @@ const ProjectTitle = styled.p`
     height: 3px;
     background-color: ${props => props.theme.primaryLight};
   }
+
+  @media ${mobile} {
+    font-size: 20px;
+  }
 `;
 
 const SwiperContainer = styled.div`
@@ -46,6 +50,7 @@ const arrowClass = css`
   color: ${props => props.theme.primaryDark};
   position: absolute;
   top: 32%;
+  cursor: pointer;
 
   @media ${bigTablets} {
     width: 70px;
@@ -108,12 +113,17 @@ export const ProjectsSwiper = ({ item }) => {
     swiperComponent.current = swiper;
   };
 
+  const projectsNum = item.projects.length;
   const [slideNum, setSlideNum] = useState(3);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-  const setWidth = (swiper, { slidesPerView }) => {
+  const setBreakpoint = (swiper, { slidesPerView }) => {
     setSlideNum(slidesPerView);
   };
-  const projectNum = item.projects.length;
+
+  const onSlideChange = swiper => {
+    setCurrentIndex(swiper.realIndex);
+  };
 
   return (
     <>
@@ -121,17 +131,26 @@ export const ProjectsSwiper = ({ item }) => {
         <span>{item.category}</span>
       </ProjectTitle>
       <SwiperContainer>
-        <Swiper onInit={setSwiper} onBreakpoint={setWidth} {...swiperSetting}>
+        <Swiper
+          onInit={setSwiper}
+          onBreakpoint={setBreakpoint}
+          onSlideChange={onSlideChange}
+          {...swiperSetting}
+        >
           {item.projects.map(project => (
             <SwiperSlide key={project.name}>
               <SingleSlide project={project} />
             </SwiperSlide>
           ))}
         </Swiper>
-        {projectNum <= slideNum ? null : (
+        {projectsNum <= slideNum ? null : (
           <>
-            <IconLeft onClick={() => navClick(false)} />
-            <IconRight onClick={() => navClick(true)} />
+            {currentIndex !== 0 ? (
+              <IconLeft onClick={() => navClick(false)} />
+            ) : null}
+            {currentIndex !== projectsNum - slideNum ? (
+              <IconRight onClick={() => navClick(true)} />
+            ) : null}
           </>
         )}
       </SwiperContainer>
