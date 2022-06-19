@@ -92,11 +92,11 @@ export const About = () => {
         <AboutInfo>
           <Name>王思婕 Sue</Name>
           <Description>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur,
-            eos saepe dolore quia nam magni maxime deleniti fugit illo nisi,
-            ipsa reiciendis accusantium numquam reprehenderit, enim sunt eum
-            adipisci iusto quaerat fugiat. Laudantium maxime rem ipsam obcaecati
-            recusandae, voluptates quibusdam
+            半路出家的前端工程師，工作上以 Nuxt / Vue 開發，並於空閒時自學 React
+            和開發上相關知識，工作上除了切版、串接 API
+            外，也曾接觸過前端效能調整、基礎 SEO，同時也擁有後端 Node.js 和
+            MySQL
+            基礎知識。另外，經過之前工作的訓練，也擅於與他人溝通協調、資料查詢統整。
           </Description>
           <Info />
         </AboutInfo>
