@@ -77,7 +77,7 @@ const IconRight = styled(ArrowRight)`
   }
 `;
 
-export const ProjectsSwiper = ({ item }) => {
+export const ProjectsSwiper = ({ item, openProjectModal }) => {
   const swiperComponent = useRef(null);
 
   const swiperSlidNum = {
@@ -138,7 +138,10 @@ export const ProjectsSwiper = ({ item }) => {
           {...swiperSetting}
         >
           {item.projects.map(project => (
-            <SwiperSlide key={project.name}>
+            <SwiperSlide
+              key={project.name}
+              onClick={() => openProjectModal(project)}
+            >
               <SingleSlide project={project} />
             </SwiperSlide>
           ))}
@@ -160,4 +163,5 @@ export const ProjectsSwiper = ({ item }) => {
 
 ProjectsSwiper.propTypes = {
   item: PropTypes.object.isRequired,
+  openProjectModal: PropTypes.func.isRequired,
 };

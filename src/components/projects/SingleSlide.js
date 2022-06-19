@@ -9,6 +9,7 @@ const Slide = styled.div`
   border-radius: 10px;
   transition: all 0.2s ease-in-out;
   overflow: hidden;
+  cursor: pointer;
 
   &::after {
     content: '';
@@ -117,26 +118,24 @@ const SlideMask = styled.div`
 
 export const SingleSlide = ({ project }) => {
   return (
-    <>
-      <Slide>
-        <ImgContainer style={{ backgroundImage: `url(${project.cover})` }}>
-          <img src={project.cover} alt={project.name} />
-        </ImgContainer>
-        <SlideTitle>
-          <span>{project.name}</span>
-        </SlideTitle>
-        <SlideMask>
-          <ul>
-            {project.desc.map((item, index) => (
-              <li key={index}>{item}</li>
-            ))}
-          </ul>
-        </SlideMask>
-      </Slide>
-    </>
+    <Slide>
+      <ImgContainer style={{ backgroundImage: `url(${project.cover})` }}>
+        <img src={project.cover} alt={project.name} />
+      </ImgContainer>
+      <SlideTitle>
+        <span>{project.name}</span>
+      </SlideTitle>
+      <SlideMask>
+        <ul>
+          {project.desc.map((item, index) => (
+            <li key={index}>{item}</li>
+          ))}
+        </ul>
+      </SlideMask>
+    </Slide>
   );
 };
 
 SingleSlide.propTypes = {
-  project: PropTypes.object.isRequired,
+  project: PropTypes.oneOfType([() => null, PropTypes.object]).isRequired,
 };

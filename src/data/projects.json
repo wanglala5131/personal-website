@@ -62,8 +62,8 @@
         "links": [
           { "name": "官網", "url": "https://vote2022.tw/" },
           {
-            "name": "候選人前台連結(建議進入官網並點選候選人的連結查看)",
-            "url": ""
+            "name": "候選人前台連結(此為假資料，也可從官網進入)",
+            "url": "https://vote2022.tw/catboss"
           }
         ],
         "cover": "/img/vote/a.png",
