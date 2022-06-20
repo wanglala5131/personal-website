@@ -8,6 +8,7 @@ import { About } from './components/about/About';
 import { Skill } from './components/skill/Skill';
 import { Experience } from './components/experience/Experience';
 import { Projects } from './components/projects/Projects';
+import { Footer } from './components/footer/Footer';
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
         <Skill />
         <Experience />
         <Projects />
+        <Footer />
       </ThemeProvider>
     </div>
   );
