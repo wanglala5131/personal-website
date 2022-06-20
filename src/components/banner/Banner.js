@@ -2,12 +2,12 @@ import styled, { keyframes } from 'styled-components';
 import { mobile, tablets } from '../variables';
 
 const typing = width => keyframes`
- from { width: 0;}
- to { width:${width}; }
+  from { width: 0;}
+  to { width:${width}; }
 `;
 
 const caret = keyframes`
- 50% { border-color: #fff; }
+  50% { border-color: #fff; }
 `;
 
 const Banner = styled.div`
