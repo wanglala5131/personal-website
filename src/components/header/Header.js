@@ -1,10 +1,12 @@
 import { useRef } from 'react';
 import styled from 'styled-components';
+import Scrollspy from 'react-scrollspy';
 import { Hamburger } from './Hamburger';
 import { tablets } from '../variables';
 
 // data
 const navList = [
+  { name: 'Top', link: '#top' },
   { name: 'About', link: '#about' },
   { name: 'Skill', link: '#skill' },
   { name: 'Experience', link: '#experience' },
@@ -23,7 +25,7 @@ const Header = styled.header`
   width: 100%;
   padding: 20px;
   box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(10px);
   z-index: 10;
 `;
 
@@ -44,19 +46,21 @@ const NavWrapper = styled.div`
 `;
 
 const Nav = styled.nav`
-  display: flex;
-  z-index: 2;
+  ul {
+    display: flex;
+    z-index: 2;
 
-  @media ${tablets} {
-    flex-direction: column;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 0 20px;
-    background-color: ${props => props.theme.bgColor};
-    transform-origin: top;
-    transform: scaleY(0);
+    @media ${tablets} {
+      flex-direction: column;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 0 20px;
+      background-color: ${props => props.theme.bgColor};
+      transform-origin: top;
+      transform: scaleY(0);
+    }
   }
 `;
 
@@ -68,25 +72,37 @@ const NavItem = styled.li`
     color: ${props => props.theme.primary};
     font-size: 18px;
     font-weight: bold;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+
+    @media ${tablets} {
+      text-shadow: 0 0 0 transparent;
+    }
 
     &::after {
       content: '';
       position: absolute;
       left: 0;
-      bottom: -10px;
+      bottom: -7px;
       width: 0;
-      height: 2px;
-      background-color: ${props => props.theme.primaryLight};
+      height: 5px;
+      background-color: ${props => props.theme.primary};
       transition: all 0.2s ease-in-out;
     }
   }
 
   @media (hover: hover) {
-    a:hover::after {
-      width: 100%;
-
+    a:hover,
+    &.is-active a {
       @media ${tablets} {
-        width: 0;
+        color: ${props => props.theme.primary};
+      }
+
+      &::after {
+        width: 100%;
+
+        @media ${tablets} {
+          width: 0;
+        }
       }
     }
   }
@@ -120,11 +136,16 @@ const PageHeader = () => {
       <Hamburger ref={hamburgerInput} />
       <NavWrapper className="nav-wrapper">
         <Nav>
-          {navList.map(item => (
-            <NavItem key={item.name} onClick={clickNav}>
-              <a href={item.link}>{item.name}</a>
-            </NavItem>
-          ))}
+          <Scrollspy
+            items={navList.map(item => item.name.toLocaleLowerCase())}
+            currentClassName="is-active"
+          >
+            {navList.map(item => (
+              <NavItem key={item.name} onClick={clickNav}>
+                <a href={item.link}>{item.name}</a>
+              </NavItem>
+            ))}
+          </Scrollspy>
         </Nav>
         <label htmlFor="hamburger"></label>
       </NavWrapper>

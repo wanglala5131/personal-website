@@ -86,7 +86,7 @@ const SecondText = styled.h2`
 
 export const PageBanner = () => {
   return (
-    <Banner>
+    <Banner id="top">
       <BannerImg />
       <TextContainer>
         <MainText>Hello! I&rsquo;m Sue.</MainText>
