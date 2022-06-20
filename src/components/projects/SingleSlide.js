@@ -96,7 +96,7 @@ const SlideMask = styled.div`
 
     &:hover {
       color: #fff;
-      background-color: rgba(74, 74, 255, 0.9);
+      background-color: rgba(0, 128, 255, 0.9);
     }
   }
 
@@ -108,7 +108,6 @@ const SlideMask = styled.div`
   li {
     margin-left: 20px;
     list-style: disc;
-    line-height: 1.3;
 
     & + li {
       margin-top: 7px;

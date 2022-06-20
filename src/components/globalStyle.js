@@ -78,7 +78,7 @@ body {
   font-family: 'Noto Sans TC', sans-serif;
   background-color: ${props => props.theme.bgColor};
   color:  ${props => props.theme.fontColour};
-  line-height: 1.2;
+  line-height: 1.3;
 }
 
 html, body {

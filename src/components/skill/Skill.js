@@ -44,7 +44,6 @@ const SkillContent = styled.li`
   font-size: 20px;
   margin: 10px 0 10px 1.2rem;
   text-indent: -1.2rem;
-  line-height: 1.3;
 
   @media ${bigTablets} {
     font-size: 18px;

@@ -72,11 +72,10 @@ const Description = styled.p`
   margin-top: 20px;
   margin-bottom: 60px;
   font-size: 22px;
-  line-height: 1.1;
 
   @media ${mobile} {
     margin-bottom: 30px;
-    font-size: 18px;
+    font-size: 16px;
   }
 `;
 

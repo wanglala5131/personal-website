@@ -8,7 +8,7 @@ const navList = [
   { name: 'About', link: '#about' },
   { name: 'Skill', link: '#skill' },
   { name: 'Experience', link: '#experience' },
-  { name: 'Works', link: '#works' },
+  { name: 'Projects', link: '#projects' },
 ];
 
 // css

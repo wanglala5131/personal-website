@@ -68,6 +68,7 @@ const IconSchool = styled(School)`
 
 const ExperienceTitle = styled.p`
   margin-top: 7px;
+  color: ${props => props.theme.primaryDark};
   font-size: 22px;
   font-weight: 700;
   line-height: 1.5;
@@ -81,7 +82,6 @@ const ExperienceTitle = styled.p`
 const ExperienceYear = styled.p`
   font-size: 20px;
   font-weight: 700;
-  color: ${props => props.theme.primaryDark};
 
   @media ${mobile} {
     font-size: 16px;
@@ -91,7 +91,6 @@ const ExperienceYear = styled.p`
 const ExperienceContent = styled.ul`
   margin-top: 10px;
   font-size: 20px;
-  line-height: 1.3;
 
   @media ${mobile} {
     font-size: 16px;
