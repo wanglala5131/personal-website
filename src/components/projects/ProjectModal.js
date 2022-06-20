@@ -1,11 +1,15 @@
+import { forwardRef } from 'react';
 import styled, { css } from 'styled-components';
 import {
   Close,
   Code,
   InsertDriveFile,
   InsertLink,
+  Image,
 } from '@styled-icons/material';
 import PropTypes from 'prop-types';
+
+import { tablets } from '../variables';
 
 const ModalBody = styled.div`
   position: absolute;
@@ -27,7 +31,7 @@ const IconClose = styled(Close)`
   top: 10px;
   right: 10px;
   width: 30px;
-  color: ${props => props.theme.primaryDark};
+  color: #fff;
   cursor: pointer;
 `;
 
@@ -46,6 +50,9 @@ const IconInsertDriveFile = styled(InsertDriveFile)`
 const IconInsertLink = styled(InsertLink)`
   ${IconClass}
 `;
+const IconImage = styled(Image)`
+  ${IconClass}
+`;
 
 const Title = styled.p`
   padding: 20px;
@@ -53,7 +60,7 @@ const Title = styled.p`
   font-weight: 700;
   color: #fff;
   text-align: center;
-  background: ${props => props.theme.primaryDark};
+  background: ${props => props.theme.primary};
   border-radius: 5px 5px 0 0;
 `;
 
@@ -62,13 +69,17 @@ const ModalContent = styled.div`
   padding: 0 40px 20px;
   overflow: auto;
 
+  @media ${tablets} {
+    padding: 0 20px 20px;
+  }
+
   &::-webkit-scrollbar {
     width: 9px;
     height: 9px;
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: ${props => props.theme.primary};
+    background-color: ${props => props.theme.primaryLight};
     border-radius: 10px;
     min-height: 28px;
   }
@@ -105,23 +116,73 @@ const Content = styled.div`
   }
 
   li {
-    margin-left: 20px;
+    margin-left: 25px;
     list-style: disc;
-    line-height: 1.3;
 
     & + li {
       margin-top: 10px;
     }
   }
+
+  .testAccount {
+    font-size: 16px;
+    margin-top: 10px;
+    white-space: pre-line;
+  }
 `;
 
-export const ProjectModal = ({ project, closeModal }) => {
+const ProjectImgList = styled.div`
+  display: flex;
+  margin-bottom: 50px;
+  padding-bottom: 50px;
+  border-bottom: 3px solid ${props => props.theme.primaryLight};
+
+  @media ${tablets} {
+    flex-direction: column;
+  }
+
+  &:last-child {
+    border-bottom: 0 solid transparent;
+  }
+
+  p {
+    margin-left: 10px;
+    flex: 1 1 40%;
+    white-space: pre-line;
+
+    @media ${tablets} {
+      margin-left: 0;
+      margin-top: 10px;
+    }
+  }
+`;
+
+const ProjectImg = styled.div`
+  flex: 1 1 60%;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.1);
+    vertical-align: middle;
+  }
+`;
+
+const ProjectNote = styled.p`
+  margin-top: 20px;
+  font-size: 16px;
+  color: #adadad;
+`;
+
+export const ProjectModal = forwardRef(({ project, closeModal }, ref) => {
   return (
     <ModalBody>
       <IconClose onClick={closeModal} />
       <Title>{project.name}</Title>
 
-      <ModalContent>
+      <ModalContent ref={ref}>
+        {project.note ? <ProjectNote>{project.note}</ProjectNote> : null}
         <SubTitle>
           <IconInsertLink />
           相關連結：
@@ -132,6 +193,9 @@ export const ProjectModal = ({ project, closeModal }) => {
               {item.name}
             </a>
           ))}
+          {project.accounts ? (
+            <p className="testAccount">{project.accounts}</p>
+          ) : null}
         </Content>
 
         <SubTitle>
@@ -151,10 +215,27 @@ export const ProjectModal = ({ project, closeModal }) => {
             ))}
           </ul>
         </Content>
+
+        <SubTitle>
+          <IconImage />
+          詳細圖文介紹：
+        </SubTitle>
+        <Content>
+          {project.imgList.map((item, index) => (
+            <ProjectImgList key={index}>
+              <ProjectImg>
+                <img src={item.img} alt={item.desc} />
+              </ProjectImg>
+              <p>{item.desc}</p>
+            </ProjectImgList>
+          ))}
+        </Content>
       </ModalContent>
     </ModalBody>
   );
-};
+});
+
+ProjectModal.displayName = 'ProjectModal';
 
 ProjectModal.propTypes = {
   project: PropTypes.object.isRequired,

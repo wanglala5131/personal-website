@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import styled from 'styled-components';
 import { Title } from '../Title';
 import { Modal } from '../Modal';
@@ -14,16 +14,22 @@ const ProjectsWrapper = styled.div`
 export const Projects = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalItem, setModalItem] = useState(null);
+  const projectScrollBody = useRef(null);
+
   const closeModal = () => {
     setIsModalOpen(false);
   };
   const openModal = item => {
     setIsModalOpen(true);
     setModalItem(item);
+
+    setTimeout(() => {
+      projectScrollBody.current.scrollTo(0, 0);
+    }, 10);
   };
 
   return (
-    <Container>
+    <Container id="projects">
       <Title>Projects</Title>
       <ProjectsWrapper>
         {ProjectData.map(item => (
@@ -36,7 +42,11 @@ export const Projects = () => {
       </ProjectsWrapper>
       <Modal isOpen={isModalOpen} closeModal={closeModal}>
         {modalItem ? (
-          <ProjectModal project={modalItem} closeModal={closeModal} />
+          <ProjectModal
+            ref={projectScrollBody}
+            project={modalItem}
+            closeModal={closeModal}
+          />
         ) : null}
       </Modal>
     </Container>
