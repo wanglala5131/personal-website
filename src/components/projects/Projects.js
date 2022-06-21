@@ -5,7 +5,7 @@ import { Modal } from 'components/Modal';
 import { Container } from 'components/Custom';
 import { ProjectsSwiper } from 'components/projects/ProjectsSwiper';
 import { ProjectModal } from 'components/projects/ProjectModal';
-import ProjectData from 'data/projects.json';
+import ProjectData from 'data/projects.js';
 
 const ProjectsWrapper = styled.div`
   margin: 100px 0;
