@@ -2,7 +2,6 @@ import styled, { css } from 'styled-components';
 import { tablets, mobile } from 'components/variables';
 import { PhoneAndroid, Email } from '@styled-icons/material';
 import { Container } from 'components/Custom';
-import { Line } from '@styled-icons/fa-brands';
 
 const FooterDiv = styled.footer`
   padding: 20px;
@@ -62,9 +61,6 @@ const InfoPhone = styled(PhoneAndroid)`
 const InfoEmail = styled(Email)`
   ${IconStyle}
 `;
-const InfoLine = styled(Line)`
-  ${IconStyle}
-`;
 
 export const Footer = () => {
   return (
@@ -77,16 +73,6 @@ export const Footer = () => {
         <p>
           <InfoEmail />
           <a href="mailto:sue4100035045@gmail.com">sue4100035045@gmail.com</a>
-        </p>
-        <p>
-          <InfoLine />
-          <a
-            href="https://line.me/ti/p/k9qtOMkBU_"
-            target="_blank"
-            rel="noreferrer"
-          >
-            sue4133
-          </a>
         </p>
       </FooterContainer>
     </FooterDiv>

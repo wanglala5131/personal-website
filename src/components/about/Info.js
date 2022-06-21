@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 import { mobile } from 'components/variables';
 
 import { PhoneAndroid, Email, Cake, LocationOn } from '@styled-icons/material';
-import { Line, Github, Medium } from '@styled-icons/fa-brands';
+import { Github, Medium } from '@styled-icons/fa-brands';
 
 const InfoWrapper = styled.div`
   display: grid;
@@ -49,10 +49,6 @@ const InfoPhone = styled(PhoneAndroid)`
   ${IconStyle}
 `;
 
-const InfoLine = styled(Line)`
-  ${IconStyle}
-`;
-
 const InfoGithub = styled(Github)`
   ${IconStyle}
 `;
@@ -90,17 +86,6 @@ export const Info = () => {
       <InfoItem>
         <InfoPhone />
         <a href="tel:+886-911412626">(+886) 911-412-626</a>
-      </InfoItem>
-
-      <InfoItem>
-        <InfoLine />
-        <a
-          href="https://line.me/ti/p/k9qtOMkBU_"
-          target="_blank"
-          rel="noreferrer"
-        >
-          sue4133
-        </a>
       </InfoItem>
 
       <InfoItem>
