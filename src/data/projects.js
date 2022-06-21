@@ -23,7 +23,7 @@ module.exports = [
             url: 'https://play.google.com/store/apps/details?id=com.picnese.zhonghua&fbclid=IwAR0DsA2WO8c6p42WBOM0MP3hVpMMkBU5m66Rwgu_RqsYaO3bIDYoGNgbysI',
           },
         ],
-        cover: require('assets/img/chinese-tree/index.png'),
+        cover: require('assets/img/chinese-tree/index.jpg'),
         intro:
           '給小孩子或外國人學習中文字的遊戲 app / 網站，利用有趣的遊戲與可愛的動畫達到學習中文字的目的 (ps:真的非常建議註冊去玩玩看！每個帳號都有免費的課程可以玩)。',
         develop: [
@@ -34,19 +34,19 @@ module.exports = [
         ],
         imgList: [
           {
-            img: require('assets/img/chinese-tree/home.png'),
+            img: require('assets/img/chinese-tree/home.jpg'),
             desc: '課程選擇頁面，有許多部首可供挑戰。',
           },
           {
-            img: require('assets/img/chinese-tree/game.png'),
+            img: require('assets/img/chinese-tree/game.jpg'),
             desc: '有猜、寫、拚、猜圖四種小遊戲，四者皆有過關條件與相對應的音效。\n例如拚字時點擊英文字需同時發音，拚完時還必須有拚出整個單字的音效、利用原生 JS 寫出拖曳效果，達到猜圖和拼字的目的。',
           },
           {
-            img: require('assets/img/chinese-tree/setting.png'),
+            img: require('assets/img/chinese-tree/setting.jpg'),
             desc: '學習設定具有多種設定，可以根據使用者的需求調整，例如若關閉第二語言，則須將有英文相關的部分關掉。',
           },
           {
-            img: require('assets/img/chinese-tree/explaining.png'),
+            img: require('assets/img/chinese-tree/explaining.jpg'),
             desc: '解說字部分可能會有單字單音多詞句、單字多音多詞句等等的多種組合，因此必須撰寫一套程式碼以符合所有情況，並且必須判斷何時結束動畫，讓使用者可以點擊圖或文字重複發音。',
           },
         ],
@@ -68,7 +68,7 @@ module.exports = [
             url: 'https://vote2022.tw/catboss',
           },
         ],
-        cover: require('assets/img/vote/a.png'),
+        cover: require('assets/img/vote/a.jpg'),
         intro:
           '提供給參政候選人宣傳政見與自己的平台，提供多個版面可供選擇，還有可客製化需求的區塊。',
         develop: [
@@ -80,23 +80,23 @@ module.exports = [
         ],
         imgList: [
           {
-            img: require('assets/img/vote/b.png'),
+            img: require('assets/img/vote/b.jpg'),
             desc: '前台 demo 前台候選人頁面，使用者可自行上傳圖片和文字介紹自己。',
           },
           {
-            img: require('assets/img/vote/info.png'),
+            img: require('assets/img/vote/info.jpg'),
             desc: '前台 demo 前台候選人頁面，使用者撰寫政見與經歷，甚至可連結粉絲團貼文。',
           },
           {
-            img: require('assets/img/vote/setting.png'),
+            img: require('assets/img/vote/setting.jpg'),
             desc: '後台頁面，使用者填寫的資料會用於前台顯示 (圖上為假資料)。',
           },
           {
-            img: require('assets/img/vote/editor.png'),
+            img: require('assets/img/vote/editor.jpg'),
             desc: '後台頁面，此處使用 TinyMCE 給使用者編輯客製區塊內容與高度，另外，也可填入 URL，利用特定關鍵字就可轉換成 iframe。',
           },
           {
-            img: require('assets/img/vote/index.png'),
+            img: require('assets/img/vote/index.jpg'),
             desc: '官網，可查看最新政治新聞與以前的選舉資訊。',
           },
         ],
@@ -111,7 +111,7 @@ module.exports = [
           '方案訂閱功能與資料結構較為複雜，需與 PM 討論各種可能情況，且必須統整後端傳來的相關資料顯示於前台畫面。',
         ],
         links: [{ name: '網站連結', url: 'https://miniiek.iek.org.tw' }],
-        cover: require('assets/img/iek/index.png'),
+        cover: require('assets/img/iek/index.jpg'),
         intro:
           '使用者可購買工研院開設的課程與文章，學習科技產業相關知識，有分成月付方案與限制次數購買方案。',
         develop: [
@@ -121,15 +121,15 @@ module.exports = [
         ],
         imgList: [
           {
-            img: require('assets/img/iek/index.png'),
+            img: require('assets/img/iek/index.jpg'),
             desc: '首頁，可察看最新和熱門課程的資訊。',
           },
           {
-            img: require('assets/img/iek/video.png'),
+            img: require('assets/img/iek/video.jpg'),
             desc: '影片頁面，需串接 Vimeo。',
           },
           {
-            img: require('assets/img/iek/project.png'),
+            img: require('assets/img/iek/project.jpg'),
             desc: '方案訂閱部分較為複雜，常與 PM 與後端工程師討論流程。',
           },
         ],
@@ -148,7 +148,7 @@ module.exports = [
             url: 'https://presidential-hackathon.taiwan.gov.tw/en/international-track/',
           },
         ],
-        cover: require('assets/img/hack/index.png'),
+        cover: require('assets/img/hack/index.jpg'),
         intro: '政府案子，為國際黑客松介紹與報名頁面。',
         develop: [
           '切板與邏輯雖沒有其他專案複雜，但開發時間較短，在快速開發的過程中仍要兼顧到品質。',
@@ -156,11 +156,11 @@ module.exports = [
         ],
         imgList: [
           {
-            img: require('assets/img/hack/index.png'),
+            img: require('assets/img/hack/index.jpg'),
             desc: '網站主頁。',
           },
           {
-            img: require('assets/img/hack/apply.png'),
+            img: require('assets/img/hack/apply.jpg'),
             desc: '網站報名申請頁。',
           },
         ],
@@ -202,7 +202,7 @@ module.exports = [
             url: 'https://github.com/wanglala5131/practice-lists',
           },
         ],
-        cover: require('assets/img/practice-list/home.png'),
+        cover: require('assets/img/practice-list/home.jpg'),
         intro:
           '主要是給系/校隊或習慣有運動計畫的使用者，有編輯運動項目、製作運動菜單等功能，藉由已訂好的項目來安排菜單，可以給運動員快速安排菜單，也避免系校隊在交替隊長時遺失一些合適的練習項目。 (詳細可點進去回顧紀錄的文章)。',
         develop: [
@@ -212,23 +212,23 @@ module.exports = [
         ],
         imgList: [
           {
-            img: require('assets/img/practice-list/ERD.png'),
+            img: require('assets/img/practice-list/ERD.jpg'),
             desc: '整個網站的ER diagram (ERD)，參考自有購物車的網站，自己建置後端架構出來。',
           },
           {
-            img: require('assets/img/practice-list/home.png'),
+            img: require('assets/img/practice-list/home.jpg'),
             desc: '網站主頁，可篩選類別與次類別，可將項目加進目前的暫定菜單中。',
           },
           {
-            img: require('assets/img/practice-list/category.png'),
+            img: require('assets/img/practice-list/category.jpg'),
             desc: '類別與次類別設定頁面。',
           },
           {
-            img: require('assets/img/practice-list/temp-list.png'),
+            img: require('assets/img/practice-list/temp-list.jpg'),
             desc: '暫定菜單頁面，可拖曳移動每個項目的位置，也可加上組數和備註。',
           },
           {
-            img: require('assets/img/practice-list/list.png'),
+            img: require('assets/img/practice-list/list.jpg'),
             desc: '已排菜單頁面，可再次編輯菜單，也可直接查看菜單。',
           },
         ],
@@ -256,7 +256,7 @@ module.exports = [
             url: 'https://medium.com/%E6%8B%89%E6%8B%89%E7%9A%84%E7%A8%8B%E5%BC%8F%E7%AD%86%E8%A8%98/%E5%BF%83%E5%BE%97-%E5%A4%9A%E4%BA%BA%E5%8D%94%E4%BD%9C%E5%B0%88%E6%A1%88-simple-twitter-6d001f5dd8d5',
           },
         ],
-        cover: require('assets/img/twitter/index.png'),
+        cover: require('assets/img/twitter/index.jpg'),
         intro:
           '全端專案，為仿造 Twitter 做出來的兩個禮拜專案，可登入、發表新貼文、回覆貼文等功能。',
         develop: [
@@ -267,7 +267,7 @@ module.exports = [
         ],
         imgList: [
           {
-            img: require('assets/img/twitter/index.png'),
+            img: require('assets/img/twitter/index.jpg'),
             desc: '網站主頁',
           },
         ],

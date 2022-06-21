@@ -3,7 +3,7 @@ import { bigTablets, mobile } from '../variables';
 import { Container } from 'components/Custom';
 import { Title } from 'components/Title';
 import { Info } from 'components/about/Info';
-import avatar from 'assets/img/avatar.jpg';
+import avatar from 'assets/img/avatar.jpeg';
 
 const AboutContainer = styled(Container)`
   display: flex;
