@@ -66,8 +66,8 @@ const SkillContent = styled.li`
 
 export const Skill = () => {
   return (
-    <div id="skill">
-      <Title>SKILL</Title>
+    <div id="skills">
+      <Title>SKILLS</Title>
       <SkillWrapper>
         {skillData.map(item => (
           <SkillItem key={item.category}>

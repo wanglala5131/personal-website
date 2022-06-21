@@ -8,7 +8,7 @@ import { tablets } from 'components/variables';
 const navList = [
   { name: 'Top', link: '#top' },
   { name: 'About', link: '#about' },
-  { name: 'Skill', link: '#skill' },
+  { name: 'Skills', link: '#skills' },
   { name: 'Experience', link: '#experience' },
   { name: 'Projects', link: '#projects' },
 ];
