@@ -7,6 +7,10 @@ import { ProjectsSwiper } from 'components/projects/ProjectsSwiper';
 import { ProjectModal } from 'components/projects/ProjectModal';
 import ProjectData from 'data/projects.js';
 
+const ProjectContainer = styled(Container)`
+  overflow: hidden;
+`;
+
 const ProjectsWrapper = styled.div`
   margin: 100px 0;
 `;
@@ -29,7 +33,7 @@ export const Projects = () => {
   };
 
   return (
-    <Container id="projects">
+    <ProjectContainer id="projects">
       <Title>Projects</Title>
       <ProjectsWrapper>
         {ProjectData.map(item => (
@@ -49,6 +53,6 @@ export const Projects = () => {
           />
         ) : null}
       </Modal>
-    </Container>
+    </ProjectContainer>
   );
 };
