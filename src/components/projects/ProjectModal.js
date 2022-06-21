@@ -216,20 +216,24 @@ export const ProjectModal = forwardRef(({ project, closeModal }, ref) => {
           </ul>
         </Content>
 
-        <SubTitle>
-          <IconImage />
-          詳細圖文介紹：
-        </SubTitle>
-        <Content>
-          {project.imgList.map((item, index) => (
-            <ProjectImgList key={index}>
-              <ProjectImg>
-                <img src={item.img} alt={item.desc} />
-              </ProjectImg>
-              <p>{item.desc}</p>
-            </ProjectImgList>
-          ))}
-        </Content>
+        {project.imgList ? (
+          <>
+            <SubTitle>
+              <IconImage />
+              詳細圖文介紹：
+            </SubTitle>
+            <Content>
+              {project.imgList.map((item, index) => (
+                <ProjectImgList key={index}>
+                  <ProjectImg>
+                    <img src={item.img} alt={item.desc} />
+                  </ProjectImg>
+                  <p>{item.desc}</p>
+                </ProjectImgList>
+              ))}
+            </Content>
+          </>
+        ) : null}
       </ModalContent>
     </ModalBody>
   );

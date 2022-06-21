@@ -275,6 +275,31 @@ module.exports = [
         accounts:
           'Admin帳號：root@example.com / 密碼：12345678 \n user帳號：user1@example.com / 密碼：12345678',
       },
+      {
+        name: '個人履歷 - 網站版',
+        desc: [
+          '以 React 為框架',
+          '使用 Styled-components 撰寫樣式',
+          '套件使用 Swiper、React-Scrollspy',
+        ],
+        links: [
+          {
+            name: 'github',
+            url: 'https://github.com/wanglala5131/personal-website',
+          },
+        ],
+        cover: require('assets/img/personal-website/index.jpg'),
+        intro:
+          '將履歷轉成網頁版，增加可讀性，另外也作為 React 和  Styled-components 練習專案',
+        develop: [
+          '以 React 為框架',
+          '使用 Styled-components 撰寫樣式',
+          '套件使用 Swiper、React-Scrollspy',
+        ],
+        imgList: null,
+        note: '',
+        accounts: '',
+      },
     ],
   },
 ];
