@@ -1,6 +1,6 @@
 import { forwardRef } from 'react';
 import styled from 'styled-components';
-import { tablets } from '../variables';
+import { tablets } from 'components/variables';
 
 const HamburgerContainer = styled.label`
   display: none;

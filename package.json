@@ -2,12 +2,14 @@
   "name": "my-personal-website",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://wanglala5131.github.io/personal-website",
   "dependencies": {
     "@styled-icons/fa-brands": "^10.38.0",
     "@styled-icons/material": "^10.34.0",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
+    "gh-pages": "^4.0.0",
     "prop-types": "^15.8.1",
     "prop-types-nullable": "^1.0.1",
     "react": "^18.1.0",
@@ -24,7 +26,9 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint src/*.js",
-    "lint:fix": "eslint --fix src/*.js"
+    "lint:fix": "eslint --fix src/*.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [

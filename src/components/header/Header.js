@@ -1,8 +1,8 @@
 import { useRef } from 'react';
 import styled from 'styled-components';
 import Scrollspy from 'react-scrollspy';
-import { Hamburger } from './Hamburger';
-import { tablets } from '../variables';
+import { Hamburger } from 'components/header/Hamburger';
+import { tablets } from 'components/variables';
 
 // data
 const navList = [

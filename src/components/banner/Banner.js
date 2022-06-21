@@ -1,5 +1,6 @@
 import styled, { keyframes } from 'styled-components';
 import { mobile, tablets } from '../variables';
+import banner from 'assets/img/banner.jpg';
 
 const typing = width => keyframes`
   from { width: 0;}
@@ -22,7 +23,7 @@ const Banner = styled.div`
 const BannerImg = styled.div`
   width: 100%;
   height: 100%;
-  background-image: url('/img/banner.jpg');
+  background-image: url(${banner});
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 0% 60%;

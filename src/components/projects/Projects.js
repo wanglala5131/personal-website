@@ -1,11 +1,11 @@
 import { useState, useRef } from 'react';
 import styled from 'styled-components';
-import { Title } from '../Title';
-import { Modal } from '../Modal';
-import { Container } from '../Custom';
-import { ProjectsSwiper } from './ProjectsSwiper';
-import { ProjectModal } from './ProjectModal';
-import ProjectData from '../../data/projects.json';
+import { Title } from 'components/Title';
+import { Modal } from 'components/Modal';
+import { Container } from 'components/Custom';
+import { ProjectsSwiper } from 'components/projects/ProjectsSwiper';
+import { ProjectModal } from 'components/projects/ProjectModal';
+import ProjectData from 'data/projects.json';
 
 const ProjectsWrapper = styled.div`
   margin: 100px 0;

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { bigTablets, mobile } from './variables';
+import { bigTablets, mobile } from 'components/variables';
 
 export const Container = styled.div`
   width: 100%;

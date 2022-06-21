@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 import { bigTablets, mobile } from '../variables';
-import { Container } from '../Custom';
-import { Title } from '../Title';
-import { Info } from './Info';
+import { Container } from 'components/Custom';
+import { Title } from 'components/Title';
+import { Info } from 'components/about/Info';
+import avatar from 'assets/img/avatar.jpg';
 
 const AboutContainer = styled(Container)`
   display: flex;
@@ -85,7 +86,7 @@ export const About = () => {
       <Title>ABOUT ME</Title>
       <AboutContainer>
         <ImgBox>
-          <img src="/img/avatar.jpg" alt="Sue, front-end develop, 王思婕" />
+          <img src={avatar} alt="Sue, front-end develop, 王思婕" />
         </ImgBox>
 
         <AboutInfo>

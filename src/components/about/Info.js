@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { mobile } from '../variables';
+import { mobile } from 'components/variables';
 
 import { PhoneAndroid, Email, Cake, LocationOn } from '@styled-icons/material';
 import { Line, Github, Medium } from '@styled-icons/fa-brands';

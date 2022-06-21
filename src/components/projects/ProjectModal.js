@@ -9,7 +9,7 @@ import {
 } from '@styled-icons/material';
 import PropTypes from 'prop-types';
 
-import { tablets } from '../variables';
+import { tablets } from 'components/variables';
 
 const ModalBody = styled.div`
   position: absolute;

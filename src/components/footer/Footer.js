@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
-import { tablets, mobile } from '../variables';
+import { tablets, mobile } from 'components/variables';
 import { PhoneAndroid, Email } from '@styled-icons/material';
-import { Container } from '../Custom';
+import { Container } from 'components/Custom';
 import { Line } from '@styled-icons/fa-brands';
 
 const FooterDiv = styled.footer`

@@ -2,7 +2,7 @@ import { useState, useRef } from 'react';
 import styled, { css } from 'styled-components';
 import PropTypes from 'prop-types';
 import { ArrowLeft, ArrowRight } from '@styled-icons/material';
-import { bigTablets, mobile } from '../variables';
+import { bigTablets, mobile } from 'components/variables';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Navigation } from 'swiper';

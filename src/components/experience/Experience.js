@@ -1,9 +1,9 @@
 import styled, { css } from 'styled-components';
-import { bigTablets, mobile } from '../variables';
-import { Container } from '../Custom';
-import { Title } from '../Title';
+import { bigTablets, mobile } from 'components/variables';
+import { Container } from 'components/Custom';
+import { Title } from 'components/Title';
 import { BusinessCenter, School } from '@styled-icons/material';
-import experienceData from '../../data/experience.json';
+import experienceData from 'data/experience.json';
 
 const ExperienceWrapper = styled(Container)`
   width: 60%;

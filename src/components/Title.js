@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import { tablets, mobile } from './variables';
+import { tablets, mobile } from 'components/variables';
 
 const TitleBox = styled.div`
   padding-top: 80px;
