@@ -40,7 +40,7 @@ const TextContainer = styled.div`
   top: 0;
   left: 0;
   backdrop-filter: blur(10px) brightness(60%);
-  font-family: 'Space Mono', monospace;
+  font-family: monospace;
   z-index: 1;
 `;
 
