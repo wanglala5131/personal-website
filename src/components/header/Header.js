@@ -115,6 +115,7 @@ const NavItem = styled.li`
 
     &:first-child {
       padding-top: 30px;
+      border-top: 0 solid transparent;
     }
 
     a {

@@ -24,12 +24,15 @@ const ImgBox = styled.div`
     height: 400px;
     width: auto;
     padding: 0;
+    text-align: center;
   }
 
   img {
     width: 100%;
     height: 100%;
+    max-width: 600px;
     object-fit: cover;
+    object-position: 50% 25%;
     border-radius: 5px;
   }
 
@@ -63,6 +66,10 @@ const Name = styled.h2`
   margin-top: 20px;
   font-size: 35px;
   font-weight: 700;
+
+  @media ${bigTablets} {
+    text-align: center;
+  }
 
   @media ${mobile} {
     font-size: 25px;
