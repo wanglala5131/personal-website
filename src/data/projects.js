@@ -177,8 +177,9 @@ module.exports = [
         name: '運動練習菜單 Practice-list',
         desc: [
           '前端、後端 / 資料庫、UI / UX 皆為自己構想並建置。',
-          '前端分成 Vue.js 2 和 React.js 版本。',
+          '前端分成 Vue.js 2 (2020年)和 React.js 版本(2022年)。',
           '後端使用 Node.js、Express 和 MySQL。',
+          'React 版本搭配 TypeScript 進行開發，使用 styled-components 撰寫樣式，使用 Formik & Yup 驗證表單',
         ],
         links: [
           {
@@ -195,7 +196,11 @@ module.exports = [
           },
           {
             name: '前端 github (React)',
-            url: '',
+            url: 'https://github.com/wanglala5131/practice-list-react',
+          },
+          {
+            name: '網站連結 (React)',
+            url: 'https://wanglala5131.github.io/practice-list-react/',
           },
           {
             name: '後端 github',
