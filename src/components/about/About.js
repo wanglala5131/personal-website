@@ -100,13 +100,13 @@ export const About = () => {
         <AboutInfo>
           <Name>王思婕 Sue</Name>
           <Description>
-            半路出家的前端工程師，工作上以 Nuxt / Vue 開發，並於空閒時自學 React
+            工作上以 Nuxt / Vue 開發，並於空閒時自學 React
             和開發上相關知識。工作上除了切版、串接 API
             外，也接觸過前端效能調整、基礎 SEO，同時也擁有後端 Node.js 和 MySQL
             基礎知識。
             <br />
             <br />
-            個性活潑且待人和善、做事盡責且會獨立思考，可獨立進行專案開發，曾經擔任工作上數個專案的主要開發前端工程師。
+            待人和善且擅長溝通，曾與客戶直接對話快速釐清需求，提供最佳建議。做事盡責且可獨立進行開發，曾經擔任工作上數個專案的主要開發前端工程師。
           </Description>
           <Info />
         </AboutInfo>
