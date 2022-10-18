@@ -100,13 +100,9 @@ export const About = () => {
         <AboutInfo>
           <Name>王思婕 Sue</Name>
           <Description>
-            工作上以 Nuxt / Vue 開發，並於空閒時自學 React
-            和開發上相關知識。工作上除了切版、串接 API
-            外，也接觸過前端效能調整、基礎 SEO，同時也擁有後端 Node.js 和 MySQL
-            基礎知識。
-            <br />
-            <br />
-            待人和善且擅長溝通，曾與客戶直接對話快速釐清需求，提供最佳建議。做事盡責且可獨立進行開發，曾經擔任工作上數個專案的主要開發前端工程師。
+            工作上以 Nuxt / Vue 開發，同時自學 React 、TypeScript
+            等開發上相關知識。熟悉切版、串接 API ，也負責調整頁面效能與
+            SEO。擅長溝通與協調，需要與客戶直接對話快速釐清需求，提供最佳建議。有與人協作專案之經驗，也可獨立進行開發，工作中經常需要決定專案架構與使用技術。
           </Description>
           <Info />
         </AboutInfo>
