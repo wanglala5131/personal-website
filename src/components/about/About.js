@@ -33,7 +33,7 @@ const ImgBox = styled.div`
     height: 100%;
     max-width: 500px;
     object-fit: cover;
-    object-position: 50% 16%;
+    object-position: 75% 16%;
     border-radius: 5px;
   }
 
