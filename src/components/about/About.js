@@ -17,6 +17,7 @@ const ImgBox = styled.div`
   flex: 1 0 40%;
   position: relative;
   height: 600px;
+  min-width: 450px;
   padding: 0 0 100px 100px;
 
   @media ${bigTablets} {
@@ -30,9 +31,9 @@ const ImgBox = styled.div`
   img {
     width: 100%;
     height: 100%;
-    max-width: 600px;
+    max-width: 500px;
     object-fit: cover;
-    object-position: 50% 25%;
+    object-position: 50% 16%;
     border-radius: 5px;
   }
 

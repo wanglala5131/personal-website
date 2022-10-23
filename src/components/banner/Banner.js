@@ -1,6 +1,6 @@
 import styled, { keyframes } from 'styled-components';
 import { mobile, tablets } from '../variables';
-import banner from 'assets/img/banner.jpeg';
+import banner from 'assets/img/banner-small.jpeg';
 
 const typing = width => keyframes`
   from { width: 0;}
